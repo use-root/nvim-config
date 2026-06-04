@@ -116,11 +116,7 @@ command: Mason
 
 Work like a bridge:
 
-Mason
-   ↓
-Install the server
-   ↓
-LSP use it
+Mason -> Install the server -> LSP use it
 
 ```lua
 
@@ -145,8 +141,6 @@ mason_lsp.setup({
 ---
 ### 4. nvim-lspconfig
 
-Client LSP:
-
 Language configuration:
 
 |Language  | LSP   |
@@ -159,9 +153,9 @@ Language configuration:
 |CSS   |  cssls |
 |JS/TS/JSON |ts_ls   |
 
+
 ---
-5. conform.nvim
----------------------------------------------------------
+### 5. conform.nvim
 
 Formateador.
 
@@ -190,88 +184,27 @@ Ejemplo:
 
 Space + f
 
-=========================================================
+---
+### 6. telescope.nvim
 
-6. telescope.nvim
----------------------------------------------------------
+**Main search.**
 
-Buscador principal.
+![Image of Manage Package Mason](./img/telescope_search.png)
 
-Atajos:
+```lua
+<leader>ff looking for files.
 
-<leader>ff
+<leader>fg: Looking for some text inside the project
+```lua
 
-Buscar archivos.
+---
+### emmet-vim
 
-Ejemplo:
+Shortcuts HTML, with `<C-Y>,`, the caracter ',' isn't a option.
 
-Space ff
+Example:
 
----------------------------------------------------------
-
-<leader>fg
-
-Buscar texto dentro del proyecto.
-
-Ejemplo:
-
-Space fg
-
-Escribe:
-
-main
-
-Y busca todas las apariciones.
-
----------------------------------------------------------
-
-<leader>fb
-
-Lista buffers abiertos.
-
-Ejemplo:
-
-Space fb
-
----------------------------------------------------------
-
-<leader>fh
-
-Buscar ayuda de Neovim.
-
-Ejemplo:
-
-Space fh
-
-=========================================================
-
-7. telescope-fzf-native.nvim
----------------------------------------------------------
-
-Acelera Telescope.
-
-No tiene comandos.
-
-Trabaja automáticamente.
-
-=========================================================
-
-8. plenary.nvim
----------------------------------------------------------
-
-Dependencia de Telescope.
-
-No tiene comandos.
-
-=========================================================
-
-9. emmet-vim
----------------------------------------------------------
-
-Expansión HTML rápida.
-
-Ejemplos:
-
+```html
 ul>li*5
 
 TAB
@@ -285,371 +218,4 @@ Resultado:
   <li></li>
   <li></li>
 </ul>
-
----------------------------------------------------------
-
-div.container
-
-TAB
-
-Resultado:
-
-<div class="container"></div>
-
----------------------------------------------------------
-
-html:5
-
-TAB
-
-Genera plantilla HTML completa.
 ```
-=============================================================
-LSP
-
-Ir a definición:
-
-gd
-
-Ejemplo:
-
-funcion();
-
-cursor encima
-
-gd
-
-Salta a la definición.
-
----------------------------------------------------------
-
-Referencias:
-
-gr
-
-Muestra todos los lugares donde se usa.
-
----------------------------------------------------------
-
-Documentación:
-
-K
-
-Muestra documentación flotante.
-
----------------------------------------------------------
-
-Renombrar:
-
-<leader>rn
-
-Ejemplo:
-
-Space rn
-
-nuevo_nombre
-
----------------------------------------------------------
-
-Code Actions:
-
-<leader>ca
-
-Ejemplo:
-
-Space ca
-
-=========================================================
-VENTANAS
-=========================================================
-
-División vertical:
-
-<leader>sv
-
-Space sv
-
----------------------------------------------------------
-
-División horizontal:
-
-<leader>sh
-
-Space sh
-
----------------------------------------------------------
-
-Moverse entre ventanas:
-
-Ctrl+h
-
-izquierda
-
-Ctrl+j
-
-abajo
-
-Ctrl+k
-
-arriba
-
-Ctrl+l
-
-derecha
-
-=========================================================
-BUFFERS
-=========================================================
-
-Siguiente:
-
-<leader>bn
-
-Space bn
-
----------------------------------------------------------
-
-Anterior:
-
-<leader>bp
-
-Space bp
-
-=========================================================
-TERMINAL
-=========================================================
-
-Abrir terminal:
-
-<leader>t
-
-Space t
-
----------------------------------------------------------
-
-Salir de terminal:
-
-Esc
-
-=========================================================
-ARCHIVOS
-=========================================================
-
-Explorador:
-
-<leader>e
-
-Space e
-
----------------------------------------------------------
-
-Buscar archivo:
-
-<leader>ff
-
-Space ff
-
-=========================================================
-EDICIÓN
-=========================================================
-
-Guardar:
-
-<leader>s
-
-Space s
-
----------------------------------------------------------
-
-Guardar y salir:
-
-<leader>x
-
-Space x
-
----------------------------------------------------------
-
-Unir líneas:
-
-J
-
-Mantiene posición del cursor.
-
-=========================================================
-MOVER LÍNEAS
-=========================================================
-
-Subir línea:
-
-Alt+k
-
----------------------------------------------------------
-
-Bajar línea:
-
-Alt+j
-
----------------------------------------------------------
-
-Modo visual:
-
-Alt+k
-
-Alt+j
-
-También funciona.
-
-=========================================================
-INDENTACIÓN
-=========================================================
-
-Visual:
-
->
-
-Indentar derecha.
-
----------------------------------------------------------
-
-<
-
-Indentar izquierda.
-
-=========================================================
-CONFIGURACIÓN
-=========================================================
-
-Editar config:
-
-<leader>rc
-
-Space rc
-
----------------------------------------------------------
-
-Recargar config:
-
-<leader>rl
-
-Space rl
-
-=========================================================
-PORTAPAPELES
-=========================================================
-
-Copiar línea:
-
-yy
-
----------------------------------------------------------
-
-Pegar:
-
-p
-
----------------------------------------------------------
-
-Copiar selección:
-
-y
-
----------------------------------------------------------
-
-Pegar antes:
-
-P
-
-=========================================================
-NAVEGACIÓN NATIVA VIM
-=========================================================
-
-h
-
-izquierda
-
----------------------------------------------------------
-
-j
-
-abajo
-
----------------------------------------------------------
-
-k
-
-arriba
-
----------------------------------------------------------
-
-l
-
-derecha
-
----------------------------------------------------------
-
-gg
-
-inicio archivo
-
----------------------------------------------------------
-
-G
-
-final archivo
-
----------------------------------------------------------
-
-0
-
-inicio línea
-
----------------------------------------------------------
-
-$
-
-final línea
-
----------------------------------------------------------
-
-w
-
-siguiente palabra
-
----------------------------------------------------------
-
-b
-
-palabra anterior
-
----------------------------------------------------------
-
-e
-
-final palabra
-
-=========================================================
-BUSCAR
-=========================================================
-
-/
-
-buscar texto
-
-Ejemplo:
-
-/main
-
-Enter
-
----------------------------------------------------------
-
-n
-
-siguiente resultado
-
----------------------------------------------------------
-
-N
-
-resultado anterior
-
