@@ -97,7 +97,7 @@ q     -> quit :3
 
 **External tool manager.**
 
-![Image of Manage Package Lazy](./img/mason_manager.png)
+![Image of Manage Package Mason](./img/mason_manager.png)
 
 Funciones:
 + Install LSP
