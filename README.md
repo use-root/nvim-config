@@ -10,33 +10,31 @@ Note: **This configuration is constantly updated**
 <summary>Summary</summary>
 
 + markdown Package's:
-    + Lazy (Plugins)
-    + Mason (Linters,Formatters...)
-        + JavaScript
-        + TypeScript
-        + HTML
-        + CSS
-        + JSON
-        + Python
-        + C
-        + C++
-        + Java
-    + markdown LSP:
-        + Mason-LSP
-        + LSP
-    + Formater:
-        + Conform
-    + Movement 
-        + Telescope
-    + Style
-        + Emmet
-        + Statusline 
+   + Lazy (Plugins)
+   + Mason (Linters,Formatters...)
+      + JavaScript
+      + TypeScript
+      + HTML
+      + CSS
+      + JSON
+      + Python
+      + C
+      + C++
+      + Java
++ LSP:
+   + Mason-LSP
+   + LSP
++ Formater:
+   + Conform
++ Movement 
+   + Telescope
++ Style
+   + Emmet
+   + Statusline 
 </details>
 
 
-
-=============================================================
-</br>
+---
 PHILOSOPHY
 ---------------------------------------------------------
 
@@ -63,9 +61,7 @@ Not included:
 - Git UI
 - DAP (debugger)
 ```
-
-=============================================================
-</br>
+---
 PLUGINS INSTALADOS
 ---------------------------------------------------------
 
@@ -74,53 +70,43 @@ PLUGINS INSTALADOS
 󰈸 ~ ❯ cat ide_minimal_conf.txt | rg -Ue "^Plugins:[\n+\w\-:\s()]+\n$"
 ```
 
-##### lazy.nvim
+##### 1.lazy.nvim
 
-**Plugins Manager**.
+**Plugins Manager.**
 
-+ Functions:
-    + Install plugins.
-    + Update plugins.
-    + Load/Sync plugins
+![Image of Manage Package Lazy](./img/lazy_manager.png)
+
+Functions:
+ + Install plugins.
+ + Update plugins.
+ + Load/Sync plugins
 
 ```bash
 Command: ':Lazy'
 
-u     -> actualizar plugins
-U     -> actualizar todo
-x     -> limpiar plugins no usados
-q     -> salir
+u     -> upadate plugins
+U     -> update all
+x     -> clear plugins
+q     -> quit :3
 ```
 
-![Image of Manage Package Lazy](/home/snatbep/.config/nvim/img/lazy_manager.png)
+##### 2. mason.nvim
 
+**External tool manager.**
 
-=============================================================
-2. mason.nvim
----------------------------------------------------------
-
-Gestor de herramientas externas.
+![Image of Manage Package Lazy](./img/lazy_manager.png)
 
 Funciones:
-- Instala LSP
-- Instala formatters
-- Instala linters
++ Install LSP
++ Install formatters
++ Install linters
 
-Comandos:
+```bash
+command: Mason
 
-:Mason
-
-:MasonInstall pyright
-
-:MasonInstall clangd
-
-:MasonInstall stylua
-
-:MasonInstall prettier
-
-:MasonInstall black
-
-:MasonUninstall nombre
+:MasonInstall <Tool>
+:MasonUninstall <Tool> :0
+```
 
 =========================================================
 
