@@ -7,6 +7,17 @@ Note: **This configuration is constantly updated**
 
 `Total plugins: 9`
 
+<details>
+<summary>How do I dropdown?</summary>
+<br>
+<li>Lazy </li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+
+</details>
+
 - Lazy
 - Mason
 - Mason-LSP
