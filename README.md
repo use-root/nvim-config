@@ -189,7 +189,7 @@ Space + f
 
 **Main search.**
 
-![Image of Manage Package Mason](./img/telescope_search.png)
+![Image of Manage Package Mason](./img/telescope_main_search.png)
 
 ```lua
 <leader>ff looking for files.
