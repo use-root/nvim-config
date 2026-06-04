@@ -4,15 +4,18 @@
 Note: **This configuration is constantly updated**
 
 
-==============================================================
+=============================================================
 </br>
 PHILOSOPHY
 ---------------------------------------------------------
+
 ```bash
 
-~/user> cat "Minimal_configuration_for_programming_develoment.txt"
+󰈸 ~ ❯ cat ide_minimal_conf.txt | rg -Ue "^Summary:[\n+\w\-:\s()]+\n$"
 
-Match:
+Summary:
+
+Included:
 - LSP
 - Formatter conform
 - Telescope
@@ -21,17 +24,16 @@ Match:
 - Statusline personalizada
 - Transparencia
 
-Not found:
+Not included:
 - Autocomplete (nvim-cmp)
 - Snippets
-- Lateral Menu 
+- Lateral Menu
 - Dashboard
 - Git UI
 - DAP (debugger)
-
 ```
 
-=========================================================
+=============================================================
 </br>
 PLUGINS INSTALADOS
 ---------------------------------------------------------
@@ -57,8 +59,7 @@ U     -> actualizar todo
 x     -> limpiar plugins no usados
 q     -> salir
 
-=========================================================
-
+=============================================================
 2. mason.nvim
 ---------------------------------------------------------
 
@@ -268,9 +269,8 @@ TAB
 
 Genera plantilla HTML completa.
 
-=========================================================
+=============================================================
 LSP
-=========================================================
 
 Ir a definición:
 
@@ -620,7 +620,7 @@ resultado anterior
 
 =========================================================
 ESTADO ACTUAL
-=========================================================
+---------------------------------------------------------
 
 ✓ Lazy
 ✓ Mason
