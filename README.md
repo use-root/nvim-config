@@ -85,7 +85,6 @@ Screenshots
 | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
 | <img src="./img/nvim1.png" alt="dark" style="border-radius:1%"/>       |      <img src="./img/nvim2.png " alt="dark" style="border-radius:1%"/> |
 | <img src="./img/nvim3.png" alt="dark" style="border-radius:1%"/>       |      <img src="./img/nvim4.png" alt="dark" style="border-radius:1%"/>  |
-| <img src="./img/nvim5.png" alt="dark" style="border-radius:1%"/>       |      <img src="./img/nvim6.png" alt="dark" style="border-radius:1%"/>  |
 
 
 ---
