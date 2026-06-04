@@ -3,8 +3,6 @@
 
 Note: **This configuration is constantly updated**
 
----
-</br>
 PHILOSOPHY
 ---------------------------------------------------------
 
