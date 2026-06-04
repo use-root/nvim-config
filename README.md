@@ -1,34 +1,42 @@
-# Hi neovim
-
 =========================================================
-NEOVIM - DOCUMENTACIÓN COMPLETA DE MI CONFIGURACIÓN
+</br>
+
+# NEOVIM - MY CONFURATION _(DOCS)_
+
+</br>
 =========================================================
 
-FILOSOFÍA
+**This configuration is constantly updated**
+
+PHILOSOPHY
 ---------------------------------------------------------
+```bash
 
-Configuración minimalista para programación.
+~/user> cat "Minimal_configuration_for_programming_develoment.txt"
 
-NO tiene:
-- Autocompletado (nvim-cmp)
+Doesn't Have:
+- Autocomplete (nvim-cmp)
 - Snippets
-- Árbol lateral
+- Lateral Menu 
 - Dashboard
 - Git UI
 - DAP (debugger)
 
 SÍ tiene:
-- LSP moderno
-- Formateo automático
+- LSP
+- Formatter conform
 - Telescope
 - Emmet
 - Mason
 - Statusline personalizada
 - Transparencia
+```
 
 =========================================================
-PLUGINS INSTALADOS
-=========================================================
+</br>
+# PLUGINS INSTALADOS
+</br>
+========================================================= 
 
 1. lazy.nvim
 ---------------------------------------------------------
