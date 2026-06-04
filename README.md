@@ -1,6 +1,18 @@
 <div align="center">
-  <h1> NEOVIM - MY CONFURATION _(DOCS)_</h1>
-  <h3>_written in lua_</h4>
+  <h1>My Minimal Configuration NEOVIM</h1>
+  <h4>Written in lua</h4>
+  <p>
+    <img
+      alt="Neovim version"
+      src="https://img.shields.io/badge/Neovim-0.11+-57A143?style=for-the-badge&logo=neovim"
+    />
+    <a href="https://github.com/ntk148v/neovim-config/releases/latest">
+        <img
+          alt="Latest release"
+          src="https://img.shields.io/github/v/release/ntk148v/neovim-config?style=for-the-badge" />
+    </a>
+  </p>
+  <br />
 </div>
 
 
