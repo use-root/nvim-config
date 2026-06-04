@@ -1,4 +1,5 @@
-<h1 aling="center">NEOVIM - MY CONFURATION _(DOCS)_</h1>
+<h1 style="text-align: center;">NEOVIM - MY CONFURATION _(DOCS)_</h1>
+
 
 Note: **This configuration is constantly updated**
 
