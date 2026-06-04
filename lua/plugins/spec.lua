@@ -1,6 +1,15 @@
 return {
 
 	{
+		"nvim-telescope/telescope.nvim",
+		version = "*",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+		},
+	},
+
+	{
 		"williamboman/mason.nvim",
 		config = function()
 			require("mason").setup()
@@ -17,16 +26,11 @@ return {
 
 	{
 		"neovim/nvim-lspconfig",
+		event = { "BufReadPre", "BufNewFile" },
 	},
 
 	{
 		"mattn/emmet-vim",
-	},
-
-	{
-		"vhyrro/luarocks.nvim",
-		priority = 1000,
-		config = true,
 	},
 
 	{
