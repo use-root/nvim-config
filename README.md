@@ -1,28 +1,18 @@
-=========================================================
-</br>
 
 # NEOVIM - MY CONFURATION _(DOCS)_
 
+Note: **This configuration is constantly updated**
+
+
+========================================================= ========================================================= =========================================================
 </br>
-=========================================================
-
-**This configuration is constantly updated**
-
 PHILOSOPHY
 ---------------------------------------------------------
 ```bash
 
 ~/user> cat "Minimal_configuration_for_programming_develoment.txt"
 
-Doesn't Have:
-- Autocomplete (nvim-cmp)
-- Snippets
-- Lateral Menu 
-- Dashboard
-- Git UI
-- DAP (debugger)
-
-SÍ tiene:
+Match:
 - LSP
 - Formatter conform
 - Telescope
@@ -30,12 +20,21 @@ SÍ tiene:
 - Mason
 - Statusline personalizada
 - Transparencia
+
+Not found:
+- Autocomplete (nvim-cmp)
+- Snippets
+- Lateral Menu 
+- Dashboard
+- Git UI
+- DAP (debugger)
+
 ```
 
 =========================================================
 </br>
-# PLUGINS INSTALADOS
-========================================================= 
+PLUGINS INSTALADOS
+---------------------------------------------------------
 
 1. lazy.nvim
 ---------------------------------------------------------
