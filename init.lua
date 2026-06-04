@@ -1,6 +1,6 @@
 -- Opciones y keymaps
 require("core.options")
--- require("core.keymaps")
+require("core.keymaps")
 require("core.colors")
 
 -- Plugins
