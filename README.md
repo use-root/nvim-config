@@ -9,18 +9,18 @@ Note: **This configuration is constantly updated**
 <details>
 <summary>Summary</summary>
 
-    + markdown Package's:
-        + Lazy (Plugins)
-        + Mason (Linters,Formatters...)
-            + JavaScript
-            + TypeScript
-            + HTML
-            + CSS
-            + JSON
-            + Python
-            + C
-            + C++
-            + Java
++ markdown Package's:
+    + Lazy (Plugins)
+    + Mason (Linters,Formatters...)
+        + JavaScript
+        + TypeScript
+        + HTML
+        + CSS
+        + JSON
+        + Python
+        + C
+        + C++
+        + Java
     + markdown LSP:
         + Mason-LSP
         + LSP
@@ -35,6 +35,8 @@ Note: **This configuration is constantly updated**
 
 
 
+=============================================================
+</br>
 PHILOSOPHY
 ---------------------------------------------------------
 
@@ -68,28 +70,30 @@ PLUGINS INSTALADOS
 ---------------------------------------------------------
 
 ```bash
-󰈸 ~ ❯ cat ide_minimal_conf.txt | rg -Ue "^Summary:[\n+\w\-:\s()]+\n$"
 
-1. lazy.nvim
----------------------------------------------------------
+󰈸 ~ ❯ cat ide_minimal_conf.txt | rg -Ue "^Plugins:[\n+\w\-:\s()]+\n$"
+```
 
-Administrador de plugins.
+##### lazy.nvim
 
-Funciones:
-- Instala plugins
-- Actualiza plugins
-- Carga plugins
+**Plugins Manager**.
 
-Comandos:
++ Functions:
+    + Install plugins.
+    + Update plugins.
+    + Load/Sync plugins
 
-:Lazy
-
-Dentro de Lazy:
+```bash
+Command: ':Lazy'
 
 u     -> actualizar plugins
 U     -> actualizar todo
 x     -> limpiar plugins no usados
 q     -> salir
+```
+
+![Image of Manage Package Lazy](/home/snatbep/.config/nvim/img/lazy_manager.png)
+
 
 =============================================================
 2. mason.nvim
