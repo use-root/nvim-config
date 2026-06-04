@@ -1,7 +1,33 @@
-
 # NEOVIM - MY CONFURATION _(DOCS)_
 
 Note: **This configuration is constantly updated**
+
+**State Now:**
+---------------------------------------------------------
+
+`Total plugins: 9`
+
+- Lazy
+- Mason
+- Mason-LSP
+- LSP
+- Conform
+- Telescope
+- Emmet
+- Statusline propia
+- Transparencia
+- Lua
+- Formaters:
+    - JavaScript
+    - TypeScript
+    - HTML
+    - CSS
+    - JSON
+    - Python
+    - C
+    - C++
+    - Java
+
 
 PHILOSOPHY
 ---------------------------------------------------------
@@ -618,32 +644,3 @@ N
 
 resultado anterior
 
-=========================================================
-ESTADO ACTUAL
----------------------------------------------------------
-
-✓ Lazy
-✓ Mason
-✓ Mason-LSP
-✓ LSP
-✓ Conform
-✓ Telescope
-✓ Emmet
-✓ Statusline propia
-✓ Transparencia
-✓ Python
-✓ Lua
-✓ JavaScript
-✓ TypeScript
-✓ HTML
-✓ CSS
-✓ JSON
-✓ C
-✓ C++
-✓ Java
-
-Total plugins:
-9
-
-Configuración:
-Minimalista + moderna + sin interfaz pesada.
