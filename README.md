@@ -70,7 +70,7 @@ PLUGINS INSTALADOS
 󰈸 ~ ❯ cat ide_minimal_conf.txt | rg -Ue "^Plugins:[\n+\w\-:\s()]+\n$"
 ```
 
-##### 1.lazy.nvim
+### 1.lazy.nvim
 
 **Plugins Manager.**
 
@@ -90,7 +90,7 @@ x     -> clear plugins
 q     -> quit :3
 ```
 
-##### 2. mason.nvim
+### 2. mason.nvim
 
 **External tool manager.**
 
