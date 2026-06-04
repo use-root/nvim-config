@@ -62,7 +62,7 @@ Not included:
 - DAP (debugger)
 ```
 ---
-PLUGINS INSTALADOS
+PLUGINS INSTALADOS:
 ---------------------------------------------------------
 
 ```bash
@@ -70,7 +70,7 @@ PLUGINS INSTALADOS
 󰈸 ~ ❯ cat ide_minimal_conf.txt | rg -Ue "^Plugins:[\n+\w\-:\s()]+\n$"
 ```
 
-### 1.lazy.nvim
+### 1. lazy.nvim
 
 **Plugins Manager.**
 
@@ -90,11 +90,14 @@ x     -> clear plugins
 q     -> quit :3
 ```
 
+---
 ### 2. mason.nvim
+
+`Formatter:3 and LSP:9`
 
 **External tool manager.**
 
-![Image of Manage Package Lazy](./img/lazy_manager.png)
+![Image of Manage Package Lazy](./img/mason_manager.png)
 
 Funciones:
 + Install LSP
@@ -105,48 +108,57 @@ Funciones:
 command: Mason
 
 :MasonInstall <Tool>
-:MasonUninstall <Tool> :0
+:MasonUninstall <Tool>
 ```
+---
+### 3. mason-lspconfig.nvim
 
-=========================================================
-
-3. mason-lspconfig.nvim
----------------------------------------------------------
-
-Conecta Mason con LSP.
-
-No tiene comandos propios.
-
-Su trabajo es:
+Work like a bridge:
 
 Mason
    ↓
-Instala servidor
+Install the server
    ↓
-LSP lo utiliza
+LSP use it
 
-=========================================================
+```lua
 
-4. nvim-lspconfig
----------------------------------------------------------
+local mason = require("mason")
+local mason_lsp = require("mason-lspconfig")
 
-Cliente LSP.
+mason.setup()
 
-Lenguajes configurados:
+mason_lsp.setup({
+	ensure_installed = {
+		"ts_ls",
+		"pyright",
+		"lua_ls",
+		"html",
+		"cssls",
+		"jsonls",
+		"clangd",
+		"jdtls",
+	},
+})
+```
+---
+### 4. nvim-lspconfig
 
-Python      -> pyright
-Lua         -> lua_ls
-C           -> clangd
-C++         -> clangd
-Java        -> jdtls
-HTML        -> html
-CSS         -> cssls
-JSON        -> jsonls
-JS          -> ts_ls
-TS          -> ts_ls
+Client LSP:
 
-=========================================================
+Language configuration:
 
+|Language  | LSP   |
+|---|---|
+|python   | pyright   |
+|Lua   | lau_ls  |
+|C/C++   | clangd    |
+|Java   |  jdtls |
+|HTML|  html |
+|CSS   |  cssls |
+|JS/TS/JSON |ts_ls   |
+
+---
 5. conform.nvim
 ---------------------------------------------------------
 
