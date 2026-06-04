@@ -4,7 +4,7 @@
   <p>
     <img
       alt="Neovim version"
-      src="https://img.shields.io/badge/Neovim-0.11+-57A143?style=for-the-badge&logo=neovim"
+      src="https://img.shields.io/badge/Neovim-0.12+-57A143?style=for-the-badge&logo=neovim"
     />
     <a href="https://github.com/ntk148v/neovim-config/releases/latest">
         <img
@@ -77,6 +77,17 @@ Not included:
 - Git UI
 - DAP (debugger)
 ```
+---
+
+Screenshots
+---------------------------------------------------------
+|                                                                        |                                                                        |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| <img src="./img/nvim1.png" alt="dark" style="border-radius:1%"/>       |      <img src="./img/nvim2.png " alt="dark" style="border-radius:1%"/> |
+| <img src="./img/nvim3.png" alt="dark" style="border-radius:1%"/>       |      <img src="./img/nvim4.png" alt="dark" style="border-radius:1%"/>  |
+| <img src="./img/nvim5.png" alt="dark" style="border-radius:1%"/>       |      <img src="./img/nvim6.png" alt="dark" style="border-radius:1%"/>  |
+
+
 ---
 Installed plugins:
 ---------------------------------------------------------
@@ -172,32 +183,13 @@ Language configuration:
 ---
 ### 5. conform.nvim
 
-Formateador.
-
-Formatters:
-
-Lua         -> stylua
-Python      -> black
-JavaScript  -> prettier
-TypeScript  -> prettier
-HTML        -> prettier
-CSS         -> prettier
-JSON        -> prettier
-Java        -> google-java-format
-C           -> clang-format
-C++         -> clang-format
-
-Comandos:
-
-:ConformInfo
-
-Atajos:
-
-<leader>f
-
-Ejemplo:
-
-Space + f
+|Language|Formatters|
+|---|---|
+|lua|stylua|
+|python|black|
+|web|prettier|
+|java|google-java-format|
+|c/c++|clang-format   |
 
 ---
 ### 6. telescope.nvim
@@ -234,3 +226,4 @@ Resultado:
   <li></li>
 </ul>
 ```
+---
