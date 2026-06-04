@@ -1,6 +1,15 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- Copiar al portapapeles del sistema
+vim.keymap.set("v", "<C-c>", '"+y', { desc = "Copy visual to clipboard" })
+vim.keymap.set("n", "<C-c>", '"+y', { desc = "Copy line to clipboard" })
+
+-- Pegar desde portapapeles
+vim.keymap.set("n", "<C-v>", '"+p', { desc = "Paste from clipboard" })
+vim.keymap.set("v", "<C-v>", '"+p', { desc = "Paste from clipboard" })
+vim.keymap.set("i", "<C-v>", "<C-R>+", { desc = "Paste from clipboard in insert mode" })
+
 vim.keymap.set("n", "<leader>s", ":w<CR>")
 vim.keymap.set("n", "<leader>x", ":x<CR>")
 -- ctl+\+n back to normal mode in terminal
@@ -50,3 +59,27 @@ vim.keymap.set("n", "<leader>t", function()
 	vim.cmd("resize 15")
 	vim.cmd("startinsert")
 end)
+
+vim.keymap.set("n", "<leader>ff", function()
+	require("telescope.builtin").find_files()
+end, { desc = "Find files" })
+
+vim.keymap.set("n", "<leader>fg", function()
+	require("telescope.builtin").live_grep()
+end, { desc = "Live grep" })
+
+vim.keymap.set("n", "<leader>fb", function()
+	require("telescope.builtin").buffers()
+end, { desc = "Buffers" })
+
+vim.keymap.set("n", "<leader>fh", function()
+	require("telescope.builtin").help_tags()
+end, { desc = "Help tags" })
+
+vim.keymap.set("n", "<leader>fr", function()
+	require("telescope.builtin").resume()
+end, { desc = "Resume last search" })
+
+vim.keymap.set("n", "<leader>fs", function()
+	require("telescope.builtin").current_buffer_fuzzy_find()
+end, { desc = "Search current buffer" })
