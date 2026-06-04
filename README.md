@@ -1,4 +1,4 @@
-# NEOVIM - MY CONFURATION _(DOCS)_
+<h1 aling="center">NEOVIM - MY CONFURATION _(DOCS)_</h1>
 
 Note: **This configuration is constantly updated**
 
@@ -62,7 +62,7 @@ Not included:
 - DAP (debugger)
 ```
 ---
-PLUGINS INSTALADOS:
+Installed plugins:
 ---------------------------------------------------------
 
 ```bash
