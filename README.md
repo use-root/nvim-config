@@ -1,4 +1,7 @@
-<h1 style="text-align: center;">NEOVIM - MY CONFURATION _(DOCS)_</h1>
+<div align="center">
+  <h1> NEOVIM - MY CONFURATION _(DOCS)_</h1>
+  <h3>_written in lua_</h4>
+</div>
 
 
 Note: **This configuration is constantly updated**
