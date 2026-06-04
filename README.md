@@ -6,38 +6,33 @@ Note: **This configuration is constantly updated**
 ---------------------------------------------------------
 
 `Total plugins: 9`
-
 <details>
-<summary>How do I dropdown?</summary>
-<br>
-<li>Lazy </li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<summary>Summary</summary>
 
+    + markdown Package's:
+        + Lazy (Plugins)
+        + Mason (Linters,Formatters...)
+            + JavaScript
+            + TypeScript
+            + HTML
+            + CSS
+            + JSON
+            + Python
+            + C
+            + C++
+            + Java
+    + markdown LSP:
+        + Mason-LSP
+        + LSP
+    + Formater:
+        + Conform
+    + Movement 
+        + Telescope
+    + Style
+        + Emmet
+        + Statusline 
 </details>
 
-- Lazy
-- Mason
-- Mason-LSP
-- LSP
-- Conform
-- Telescope
-- Emmet
-- Statusline propia
-- Transparencia
-- Lua
-- Formaters:
-    - JavaScript
-    - TypeScript
-    - HTML
-    - CSS
-    - JSON
-    - Python
-    - C
-    - C++
-    - Java
 
 
 PHILOSOPHY
