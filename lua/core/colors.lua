@@ -1,5 +1,3 @@
-vim.cmd.colorscheme("vim")
-
 local transparent = {
 	"Normal",
 	"NormalNC",
@@ -13,23 +11,7 @@ for _, group in ipairs(transparent) do
 	vim.api.nvim_set_hl(0, group, { bg = "none" })
 end
 
-vim.api.nvim_set_hl(0, "LazyNormal", { bg = "#1e1e2e", fg = "#cdd6f0" })
-vim.api.nvim_set_hl(0, "LazyNormalNC", { bg = "#1e1e2e", fg = "#9ca0a4" })
-
-vim.api.nvim_set_hl(0, "MasonNormal", { bg = "#383838", fg = "#cdd6f4" })
-vim.api.nvim_set_hl(0, "MasonHighlight", { bg = "#1e1e2e", fg = "#eeeff0" })
-
-vim.opt.winblend = 15
-vim.opt.pumblend = 15
-
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE" })
-vim.api.nvim_set_hl(0, "FloatBorder", { bg = "NONE" })
-
-vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
-vim.api.nvim_set_hl(0, "NormalNC", { bg = "NONE" })
-vim.api.nvim_set_hl(0, "LazyNormal", { bg = "NONE" })
-vim.api.nvim_set_hl(0, "MasonNormal", { bg = "NONE" })
-
+-- BG of the Interface of Telescope
 vim.cmd([[
 hi TelescopeNormal guibg=NONE
 hi TelescopeBorder guibg=NONE
