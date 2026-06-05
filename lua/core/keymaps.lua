@@ -1,72 +1,122 @@
+--------------------------------
+------------------------------ LeaderMap: <Espace> :3
+--------------------------------
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- Copiar al portapapeles del sistema
+--------------------------------
+------------------------------ Clipboard
+--------------------------------
 vim.keymap.set("v", "<C-c>", '"+y', { desc = "Copy visual to clipboard" })
 vim.keymap.set("n", "<C-c>", '"+y', { desc = "Copy line to clipboard" })
 
--- Pegar desde portapapeles
 vim.keymap.set("n", "<C-v>", '"+p', { desc = "Paste from clipboard" })
 vim.keymap.set("v", "<C-v>", '"+p', { desc = "Paste from clipboard" })
 vim.keymap.set("i", "<C-v>", "<C-R>+", { desc = "Paste from clipboard in insert mode" })
 
-vim.keymap.set("n", "<leader>s", ":w<CR>")
-vim.keymap.set("n", "<leader>x", ":x<CR>")
--- ctl+\+n back to normal mode in terminal
-vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]])
+----------------
+-------------- End Clipboard
+----------------
 
--- Buffer navigation
+--------------------------------
+------------------------------ Files
+--------------------------------
+
+vim.keymap.set("n", "<leader>s", ":w<CR>", { desc = "Save the file" })
+vim.keymap.set("n", "<leader>x", ":x<CR>", { desc = "Save and exit the file" })
+
+vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", { desc = "Move line down" })
+vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", { desc = "Move line up" })
+vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
+vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
+
+vim.keymap.set("v", "<", "<gv", { desc = "Indent left and reselect" })
+vim.keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
+
+vim.keymap.set("n", "J", "mzJ`z", { desc = "Join lines and keep cursor position" })
+
+---------------
+------------- End Files
+---------------
+
+--------------------------------
+------------------------------ Terminal
+--------------------------------
+
+vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]])
+vim.keymap.set("n", "<leader>t", function()
+	vim.cmd("botright split | terminal")
+	vim.cmd("resize 20")
+	vim.cmd("startinsert")
+end, { desc = "Back to normal mode in terminal" })
+
+----------------
+-------------- End Terminal
+----------------
+
+--------------------------------
+------------------------------ Buffer
+--------------------------------
+
 vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { desc = "Previous buffer" })
+vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { desc = "Close buffer" })
 
--- Better window navigation
-vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
-vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move to bottom window" })
-vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move to top window" })
-vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
+vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move to left buffer" })
+vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to right buffer" })
+vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move to top buffer" })
+vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move to bottom buffer" })
 
--- Splitting & Resizing
-vim.keymap.set("n", "<leader>sv", ":vsplit<CR>", { desc = "Split window vertically" })
-vim.keymap.set("n", "<leader>sh", ":split<CR>", { desc = "Split window horizontally" })
 vim.keymap.set("n", "<C-A-k>", ":resize +2<CR>", { desc = "Increase window height" })
 vim.keymap.set("n", "<C-A-j>", ":resize -2<CR>", { desc = "Decrease window height" })
 vim.keymap.set("n", "<C-A-h>", ":vertical resize -2<CR>", { desc = "Decrease window width" })
 vim.keymap.set("n", "<C-A-l>", ":vertical resize +2<CR>", { desc = "Increase window width" })
 
--- Move lines up/down
-vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", { desc = "Move line down" })
-vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", { desc = "Move line up" })
-vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
-vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
+vim.keymap.set("n", "<leader>vn", function()
+	vim.ui.input({ prompt = "File name: " }, function(input)
+		if input then
+			local pwd = vim.fn.getcwd() .. "/"
+			vim.cmd("vnew " .. pwd .. input)
+		end
+	end)
+end, { desc = "Create new vertical split with file" })
 
--- Better indenting in visual mode
-vim.keymap.set("v", "<", "<gv", { desc = "Indent left and reselect" })
-vim.keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
+---------------
+------------- End Buffer
+---------------
 
--- Quick file navigation
-vim.keymap.set("n", "<leader>e", ":Explore<CR>", { desc = "Open file explorer" })
-vim.keymap.set("n", "<leader>ff", ":find ", { desc = "Find file" })
+--------------------------------
+------------------------------ Editing Config
+--------------------------------
 
--- Better J behavior
-vim.keymap.set("n", "J", "mzJ`z", { desc = "Join lines and keep cursor position" })
+vim.keymap.set("n", "<leader>rc", ":e $MYVIMRC<CR>", { desc = "Edit main config file 'init.lua'" })
+vim.keymap.set("n", "<leader>rl", ":so $MYVIMRC<CR>", { desc = "Reload config, make a source" })
 
--- Quick config editing
-vim.keymap.set("n", "<leader>rc", ":e $MYVIMRC<CR>", { desc = "Edit config" })
-vim.keymap.set("n", "<leader>rl", ":so $MYVIMRC<CR>", { desc = "Reload config" })
+---------------
+------------- End Editting Config
+---------------
 
-vim.keymap.set("n", "<leader>t", function()
-	vim.cmd("botright split | terminal")
-	vim.cmd("resize 15")
-	vim.cmd("startinsert")
-end)
+--------------------------------
+------------------------------ Files Explorer
+--------------------------------
+
+vim.keymap.set("n", "<leader>e", ":Explore<CR>", { desc = "Open native file explorer" })
+
+---------------
+------------- End File Explorer
+---------------
+
+--------------------------------
+------------------------------ Telescope
+--------------------------------
 
 vim.keymap.set("n", "<leader>ff", function()
 	require("telescope.builtin").find_files()
-end, { desc = "Find files" })
+end, { desc = "Find files default" })
 
 vim.keymap.set("n", "<leader>fg", function()
 	require("telescope.builtin").live_grep()
-end, { desc = "Live grep" })
+end, { desc = "Live grep (rg)" })
 
 vim.keymap.set("n", "<leader>fb", function()
 	require("telescope.builtin").buffers()
@@ -83,3 +133,7 @@ end, { desc = "Resume last search" })
 vim.keymap.set("n", "<leader>fs", function()
 	require("telescope.builtin").current_buffer_fuzzy_find()
 end, { desc = "Search current buffer" })
+
+---------------
+------------- End Telescope
+---------------
