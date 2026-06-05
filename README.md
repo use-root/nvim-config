@@ -201,7 +201,7 @@ Language configuration:
 <leader>ff looking for files.
 
 <leader>fg: Looking for some text inside the project
-
+```
 ---
 ### emmet-vim
 
