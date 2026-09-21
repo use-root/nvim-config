@@ -24,6 +24,7 @@ local servers = {
 	clangd = {},
 	ccls = {},
 	jdtls = {},
+	bashls = {},
 }
 
 for server, config in pairs(servers) do
