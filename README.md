@@ -15,7 +15,6 @@
   <br />
 </div>
 
-
 Note: **This configuration is constantly updated**
 
 **State Now:**
@@ -25,32 +24,33 @@ Note: **This configuration is constantly updated**
 <details>
 <summary>Summary</summary>
 
-+ markdown Package's:
-   + Lazy (Plugins)
-   + Mason (Linters,Formatters...)
-      + JavaScript
-      + TypeScript
-      + HTML
-      + CSS
-      + JSON
-      + Python
-      + C
-      + C++
-      + Java
-+ LSP:
-   + Mason-LSP
-   + LSP
-+ Formater:
-   + Conform
-+ Movement 
-   + Telescope
-+ Style
-   + Emmet
-   + Statusline 
+- markdown Package's:
+  - Lazy (Plugins)
+  - Mason (Linters,Formatters...)
+    - JavaScript
+    - TypeScript
+    - HTML
+    - CSS
+    - JSON
+    - Python
+    - C
+    - C++
+    - Java
+- LSP:
+  - Mason-LSP
+  - LSP
+- Formater:
+  - Conform
+- Movement
+  - Telescope
+- Style
+  - Emmet
+  - Statusline
+
 </details>
 
-
 ---
+
 PHILOSOPHY
 ---------------------------------------------------------
 
@@ -77,17 +77,19 @@ Not included:
 - Git UI
 - DAP (debugger)
 ```
+
 ---
 
 Screenshots
 ---------------------------------------------------------
-|                                                                        |                                                                        |
-| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| <img src="./img/nvim1.png" alt="dark" style="border-radius:1%"/>       |      <img src="./img/nvim2.png " alt="dark" style="border-radius:1%"/> |
-| <img src="./img/nvim3.png" alt="dark" style="border-radius:1%"/>       |      <img src="./img/nvim4.png" alt="dark" style="border-radius:1%"/>  |
 
+|                                                                  |                                                                   |
+| ---------------------------------------------------------------- | ----------------------------------------------------------------- |
+| <img src="./img/nvim1.png" alt="dark" style="border-radius:1%"/> | <img src="./img/nvim2.png " alt="dark" style="border-radius:1%"/> |
+| <img src="./img/nvim3.png" alt="dark" style="border-radius:1%"/> | <img src="./img/nvim4.png" alt="dark" style="border-radius:1%"/>  |
 
 ---
+
 Installed plugins:
 ---------------------------------------------------------
 
@@ -103,9 +105,10 @@ Installed plugins:
 ![Image of Manage Package Lazy](./img/lazy_manager.png)
 
 Functions:
- + Install plugins.
- + Update plugins.
- + Load/Sync plugins
+
+- Install plugins.
+- Update plugins.
+- Load/Sync plugins
 
 ```bash
 Command: ':Lazy'
@@ -117,6 +120,7 @@ q     -> quit :3
 ```
 
 ---
+
 ### 2. mason.nvim
 
 `Formatter:3 and LSP:9`
@@ -126,9 +130,10 @@ q     -> quit :3
 ![Image of Manage Package Mason](./img/mason_manager.png)
 
 Funciones:
-+ Install LSP
-+ Install formatters
-+ Install linters
+
+- Install LSP
+- Install formatters
+- Install linters
 
 ```bash
 command: Mason
@@ -136,7 +141,9 @@ command: Mason
 :MasonInstall <Tool>
 :MasonUninstall <Tool>
 ```
+
 ---
+
 ### 3. mason-lspconfig.nvim
 
 Work like a bridge:
@@ -163,34 +170,37 @@ mason_lsp.setup({
 	},
 })
 ```
+
 ---
+
 ### 4. nvim-lspconfig
 
 Language configuration:
 
-|Language  | LSP   |
-|---|---|
-|python   | pyright   |
-|Lua   | lau_ls  |
-|C/C++   | clangd    |
-|Java   |  jdtls |
-|HTML|  html |
-|CSS   |  cssls |
-|JS/TS/JSON |ts_ls   |
-
+| Language   | LSP     |
+| ---------- | ------- |
+| python     | pyright |
+| Lua        | lau_ls  |
+| C/C++      | clangd  |
+| Java       | jdtls   |
+| HTML       | html    |
+| CSS        | cssls   |
+| JS/TS/JSON | ts_ls   |
 
 ---
+
 ### 5. conform.nvim
 
-|Language|Formatters|
-|---|---|
-|lua|stylua|
-|python|black|
-|web|prettier|
-|java|google-java-format|
-|c/c++|clang-format   |
+| Language | Formatters         |
+| -------- | ------------------ |
+| lua      | stylua             |
+| python   | black              |
+| web      | prettier           |
+| java     | google-java-format |
+| c/c++    | clang-format       |
 
 ---
+
 ### 6. telescope.nvim
 
 **Main search.**
@@ -202,7 +212,9 @@ Language configuration:
 
 <leader>fg: Looking for some text inside the project
 ```
+
 ---
+
 ### emmet-vim
 
 Shortcuts HTML, with `<C-Y>,`, the caracter ',' isn't a option.
@@ -210,11 +222,7 @@ Shortcuts HTML, with `<C-Y>,`, the caracter ',' isn't a option.
 Example:
 
 ```html
-ul>li*5
-
-TAB
-
-Resultado:
+ul>li*5 TAB Result:
 
 <ul>
   <li></li>
@@ -224,4 +232,5 @@ Resultado:
   <li></li>
 </ul>
 ```
+
 ---
