@@ -13,5 +13,6 @@ mason_lsp.setup({
 		"jsonls",
 		"clangd",
 		"jdtls",
+		"bashls",
 	},
 })
