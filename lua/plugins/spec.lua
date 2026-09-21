@@ -1,6 +1,22 @@
 return {
 
 	{
+		"yousefhadder/markdown-plus.nvim",
+		ft = "markdown",
+
+		opts = {
+			keymaps = {
+				enabled = true,
+			},
+			table = {
+				keymaps = {
+					enabled = true,
+				},
+			},
+		},
+	},
+
+	{
 		"nvim-telescope/telescope.nvim",
 		version = "*",
 		dependencies = {
