@@ -60,7 +60,6 @@ end, { desc = "Back to normal mode in terminal" })
 
 vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { desc = "Previous buffer" })
-vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { desc = "Close buffer" })
 
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move to left buffer" })
 vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to right buffer" })
@@ -137,3 +136,26 @@ end, { desc = "Search current buffer" })
 ---------------
 ------------- End Telescope
 ---------------
+local server_job = nil
+
+vim.keymap.set("n", "<leader>lo", function()
+	local file = vim.fn.expand("%:p")
+
+	if server_job ~= nil then
+		print("Server already running")
+		return
+	end
+
+	server_job = vim.fn.jobstart({
+		"live-server.sh",
+		file,
+	})
+end, { desc = "Init live server" })
+
+vim.keymap.set("n", "<leader>lc", function()
+	if server_job then
+		vim.fn.jobstop(server_job)
+		server_job = nil
+		print("Stop live server")
+	end
+end)
