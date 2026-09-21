@@ -3,6 +3,7 @@ local M = {}
 function M.setup()
 	require("conform").setup({
 		formatters_by_ft = {
+			-- set filetype ?
 			-- Frontend
 			javascript = { "prettier" },
 			typescript = { "prettier" },
@@ -12,10 +13,13 @@ function M.setup()
 			css = { "prettier" },
 			json = { "prettier" },
 			jsonc = { "prettier" },
+			markdown = { "prettier" },
+			sh = { "shfmt" },
 
 			-- Backend
 			python = { "black" },
 			lua = { "stylua" },
+			-- Markdown
 
 			-- Java
 			java = { "google-java-format" },
